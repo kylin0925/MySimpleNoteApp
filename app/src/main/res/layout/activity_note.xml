@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/edtContent"/>
+            app:layout_constraintBottom_toTopOf="@+id/edtContent" android:hint="@string/hint_enter_title"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -28,5 +28,6 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="6dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="6dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent" android:gravity="top"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edtTitle"/>
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edtTitle"
+            android:hint="@string/hint_enter_text"/>
 </android.support.constraint.ConstraintLayout>

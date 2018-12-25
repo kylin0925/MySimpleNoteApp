@@ -2,4 +2,6 @@
     <string name="app_name">MySimpleNoteApp</string>
     <string name="action_settings">Settings</string>
     <string name="action_save">Save</string>
+    <string name="hint_enter_text">Enter text</string>
+    <string name="hint_enter_title">Enter Title</string>
 </resources>

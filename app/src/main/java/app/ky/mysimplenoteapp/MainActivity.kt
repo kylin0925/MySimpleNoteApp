@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         var noteId = 0
         var title = ""
         var content = ""
-        var simpleDateFormat:SimpleDateFormat = SimpleDateFormat("yyyy/MM/dd HH::mm")
+        var simpleDateFormat:SimpleDateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm")
         var dt: Date = Date()
         var dts = simpleDateFormat.format(dt)
         if(bundle!=null) {
