@@ -23,4 +23,8 @@ class NoteDBViewModel(application: Application) :AndroidViewModel(application){
     fun update(note:Note){
         repo.updateNote(note)
     }
+
+    fun delete(note:Note){
+        repo.deleteNote(note)
+    }
 }

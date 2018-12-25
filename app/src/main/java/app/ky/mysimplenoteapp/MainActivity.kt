@@ -92,6 +92,11 @@ class MainActivity : AppCompatActivity() {
             var node = Note(title,content,dts)
             node.setId(noteId)
             viewModel.update(node)
+        }else if(resultCode == Constant.ACTION_DELETE){
+            Log.e(TAG,"deltet note")
+            var node = Note(title,content,dts)
+            node.setId(noteId)
+            viewModel.delete(node)
         }
     }
 

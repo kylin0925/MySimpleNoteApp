@@ -27,6 +27,9 @@ class NoteDBRepo(var application: Application){
     fun updateNote(note:Note){
         updateAsyncTask(dao).execute(note)
     }
+    fun deleteNote(note:Note){
+        deltetAsyncTask(dao).execute(note)
+    }
 
     inner class insertAsyncTask(dao:NoteDao) : AsyncTask<Note,Void,Void>(){
         override fun doInBackground(vararg parms: Note): Void? {
@@ -44,6 +47,17 @@ class NoteDBRepo(var application: Application){
             if(parms!= null && parms!![0]!=null) {
                 Log.e(TAG,"updateNote new note")
                 dao.updateNote(parms[0])
+            }
+            return null
+        }
+
+    }
+
+    inner class deltetAsyncTask(dao:NoteDao) : AsyncTask<Note,Void,Void>(){
+        override fun doInBackground(vararg parms: Note): Void? {
+            if(parms!= null && parms!![0]!=null) {
+                Log.e(TAG,"updateNote new note")
+                dao.deleteNote(parms[0])
             }
             return null
         }

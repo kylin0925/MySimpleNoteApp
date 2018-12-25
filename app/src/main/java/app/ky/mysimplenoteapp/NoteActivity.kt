@@ -1,12 +1,21 @@
 package app.ky.mysimplenoteapp
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
+import android.widget.Toast
+import android.R.string.ok
+import android.R.string.ok
+
+
+
+
 
 class NoteActivity : AppCompatActivity() {
     val TAG = "NoteActivity"
@@ -58,6 +67,27 @@ class NoteActivity : AppCompatActivity() {
                 intent.putExtras(bundle)
                 this.setResult(this.resultCode, intent)
                 finish()
+                return true
+            }
+            R.id.action_delete ->{
+                var alertDialog = AlertDialog.Builder(this)
+                    .setMessage("abcd")
+                    .setPositiveButton("DELETE") { dialog, which ->
+                        Log.e(TAG,"ok")
+                        var intent = Intent()
+                        var bundle = Bundle()
+                        this.resultCode = Constant.ACTION_DELETE
+                        bundle.putInt(Constant.KEY_ID,noteId)
+                        bundle.putString(Constant.KEY_TITLE, edtTitle.text.toString())
+                        bundle.putString(Constant.KEY_CONTENT, edtContent.text.toString())
+                        intent.putExtras(bundle)
+                        this.setResult(this.resultCode, intent)
+                        finish()
+                    }
+                    .setNegativeButton("CANCEL") { dialog, which ->
+                        Log.e(TAG,"CANCEL")
+                    }
+                alertDialog.show()
                 return true
             }
             else -> super.onOptionsItemSelected(item)

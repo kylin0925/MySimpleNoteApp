@@ -4,6 +4,7 @@ class Constant {
     companion object {
         val ACTION_SAVE = 0
         val ACTION_MODIFY = 1
+        val ACTION_DELETE = 2
 
 
         val KEY_ID = "ID"

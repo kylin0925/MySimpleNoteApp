@@ -1,10 +1,7 @@
 package app.ky.mysimplenoteapp
 
 import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
-import android.arch.persistence.room.Update
+import android.arch.persistence.room.*
 
 @Dao
 interface NoteDao {
@@ -17,4 +14,7 @@ interface NoteDao {
 
     @Update
     fun updateNote(note:Note)
+
+    @Delete
+    fun deleteNote(note:Note)
 }
